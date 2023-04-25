@@ -1,7 +1,70 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>European Disability Act Countdown</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        max-width: 650px;
+      }
+      body {
+        font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        color: #212529;
+        text-align: left;
+        background-color: #fff;
+      }
+      .clock {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+      }
+      .clock > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .t {
+        gap: 0.5rem;
+        display: flex;
+        flex-direction: row;
+      }
+      .d {
+        font-size: 5rem;
+        padding: 0.5rem 1rem;
+        background-color: #f6f6f6;
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        font-weight: 700;
+        line-height: 1;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+          rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+      }
+      .d:before {
+        content: "";
+        display: block;
+        left: 0;
+        right: 0;
+        top: 50%;
+        bottom: 0;
+        background: rgba(200, 200, 200, 0.4);
+        position: absolute;
+        border-top: 1px solid #fff;
+      }
+      .l {
+        color: #090078;
+        margin-top: 0.5rem;
+        font-size: 0.8rem;
+      }
+    </style>
   </head>
   <body>
     <noscript>
@@ -41,8 +104,8 @@
       </div>
       <div id="content">
         <p>
-          There are <span id="countdown"></span> days until the European
-          Disability Act comes into force.
+          There are <span id="countdown"></span> d until the European Disability
+          Act comes into force.
         </p>
         <p>
           The
@@ -102,39 +165,27 @@
       </p>
     </footer>
     <script>
-      const eadDueDate = new Date("Jun 28, 2025 00:00:00").getTime();
-      const now = new Date().getTime();
-
-      const distance = eadDueDate - now;
-      const years = Math.floor(distance / (1000 * 60 * 60 * 24 * 365));
+      const ead = new Date("Jun 28, 2025 00:00:00").getTime(),
+        n = new Date().getTime(),
+        d = ead - n,
+        y = Math.floor(d / 31536e6);
       document.getElementById("y-1").innerHTML = 0;
-      const yearsSecondDigit = years % 10;
-      document.getElementById("y-2").innerHTML = yearsSecondDigit;
-
-      const months = Math.floor(
-        (distance % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30)
-      );
-      const monthsFirstDigit = Math.floor(months / 10);
+      const y2 = y % 10;
+      document.getElementById("y-2").innerHTML = y2;
+      const m = Math.floor((d % 31536e6) / 2592e6),
+        mFirstDigit = Math.floor(m / 10);
       document.getElementById("m-1").innerHTML =
-        monthsFirstDigit > 0 ? monthsFirstDigit : 0;
-      const monthsSecondDigit = months % 10;
-      document.getElementById("m-2").innerHTML = monthsSecondDigit;
-
-      let days = Math.floor(
-        (distance % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24)
-      );
-      while (days >= 30) {
-        days -= 30;
-      }
-      const daysFirstDigit = Math.floor(days / 10);
-      document.getElementById("d-1").innerHTML =
-        daysFirstDigit > 0 ? daysFirstDigit : 0;
-      const daysSecondDigit = days % 10;
-      document.getElementById("d-2").innerHTML = daysSecondDigit;
-
-      // Display the result in the element with id="demo"
-      document.getElementById("countdown").innerHTML =
-        years + " years " + months + " months " + days + " days ";
+        mFirstDigit > 0 ? mFirstDigit : 0;
+      const mSecondDigit = m % 10;
+      document.getElementById("m-2").innerHTML = mSecondDigit;
+      let dy = Math.floor((d % 31536e6) / 864e5);
+      for (; dy >= 30; ) dy -= 30;
+      const d1 = Math.floor(dy / 10);
+      document.getElementById("d-1").innerHTML = d1 > 0 ? d1 : 0;
+      const d2 = dy % 10;
+      (document.getElementById("d-2").innerHTML = d2),
+        (document.getElementById("countdown").innerHTML =
+          y + " years, " + m + " months and " + d + " days ");
     </script>
   </body>
 </html>
