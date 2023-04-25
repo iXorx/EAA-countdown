@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 650px;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+
+.clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.clock > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.t {
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.d {
+  font-size: 5rem;
+  padding: 0.5rem 1rem;
+  background-color: #f6f6f6;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.d:before {
+  content: "";
+  display: block;
+  left: 0;
+  right: 0;
+  top: 50%;
+  bottom: 0;
+  background: rgba(200, 200, 200, 0.4);
+  position: absolute;
+  border-top: 1px solid #fff;
+}
+
+.l {
+  color: #090078;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+}
