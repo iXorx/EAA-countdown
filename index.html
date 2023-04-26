@@ -14,8 +14,13 @@
     />
     <meta name="author" content="Jordi Turull" />
     <meta name="robots" content="index, follow" />
-    <script async defer data-website-id="e83d3d60-ba15-4dfb-9584-798329a6c301" src="https://data.happergy.es/umami.js" 
-      data-domains="ixorx.github.io"></script>
+    <script
+      async
+      defer
+      data-website-id="e83d3d60-ba15-4dfb-9584-798329a6c301"
+      src="https://data.happergy.es/umami.js"
+      data-domains="ixorx.github.io"
+    ></script>
     <style>
       html,
       body {
@@ -24,6 +29,7 @@
         margin: 0 auto;
         padding: 0;
         max-width: 650px;
+        box-sizing: border-box;
       }
       body {
         font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -31,19 +37,21 @@
         color: #212529;
         text-align: left;
         background-color: #fff;
+        padding: 16px;
+        display: grid;
+        grid-template-rows: auto 1fr;
+      }
+      h1 {
+        text-align: center;
       }
       .clock {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
         margin: 2rem 0;
+        text-align: center;
       }
       .clock > div {
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
+        display: inline-block;
+        text-align: center;
+        margin: 0 0.5rem;
       }
       .t {
         gap: 0.5rem;
@@ -51,8 +59,9 @@
         flex-direction: row;
       }
       .d {
-        font-size: 5rem;
-        padding: 0.5rem 1rem;
+        display: inline-block;
+        font-size: 3rem;
+        padding: 0.5rem;
         background-color: #f6f6f6;
         position: relative;
         border-radius: 10px;
@@ -69,16 +78,58 @@
         right: 0;
         top: 50%;
         bottom: 0;
-        background: rgba(200, 200, 200, 0.4);
+        background: rgba(255, 255, 255, 0.6);
         position: absolute;
         border-top: 1px solid #fff;
       }
       .l {
         margin-bottom: 0.5rem;
-        font-size: 1.5rem;
+        font-size: 1rem;
         line-height: 2rem;
         text-transform: uppercase;
         font-weight: 800;
+      }
+      footer {
+        text-align: center;
+        color: #888;
+        font-size: 0.75rem;
+      }
+      a:focus {
+        outline: 2px dashed #bb86fd;
+      }
+      @media screen and (min-width: 550px) {
+        .d {
+          padding: 0.5rem 1rem;
+          font-size: 5rem;
+        }
+        .clock {
+          margin: 4rem auto;
+        }
+        .l {
+          font-size: 1.5rem;
+          line-height: 3rem;
+        }
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+          background: #292929;
+          color: #f2e7ff;
+        }
+        a {
+          color: #bb86fd;
+          text-decoration: underline;
+        }
+        footer {
+          color: #ccc;
+        }
+        .d {
+          background-color: #23036a;
+          color: #995eff;
+        }
+        .d::before {
+          background: rgba(35, 3, 106, 0.7);
+          border-top: 1px solid #777;
+        }
       }
     </style>
   </head>
@@ -94,7 +145,7 @@
     <header id="header">
       <h1>European Accessibility Act Countdown</h1>
     </header>
-    <main id="container">
+    <main>
       <div class="clock" aria-hidden="true">
         <div class="yy">
           <div class="t">
@@ -138,11 +189,11 @@
           expected to come into force on 28 June 2025.
         </p>
         <p>
-          The European Accessibility Act will be the first EU law to specifically
-          address the rights of people with disabilities. It will ensure that
-          people with disabilities are able to live independently and
-          participate in the life of their communities. It will also ensure that
-          people with disabilities have the same rights as everyone else.
+          The European Accessibility Act will be the first EU law to
+          specifically address the rights of people with disabilities. It will
+          ensure that people with disabilities are able to live independently
+          and participate in the life of their communities. It will also ensure
+          that people with disabilities have the same rights as everyone else.
         </p>
         <p>Businesses will benefit from:</p>
         <ul>
@@ -168,7 +219,7 @@
     </main>
     <footer>
       <p>
-        Created by Jordi Turull
+        Created by Jordi Turull<br />
         <a href="https://www.linkedin.com/in/jorditurull/">Linkedin profile</a>
       </p>
       <p>
