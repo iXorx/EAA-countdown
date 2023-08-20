@@ -6,8 +6,6 @@ const years = Math.floor(distance / (1000 * 60 * 60 * 24 * 365));
 let months = Math.floor(
   (distance % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30)
 );
-console.log("years",years)
-if (years > 0) months = months + 12;
 const monthsFirstDigit = Math.floor(months / 10);
 document.getElementById("m-1").innerHTML =
   monthsFirstDigit > 0 ? monthsFirstDigit : 0;
