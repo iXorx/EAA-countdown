@@ -7,9 +7,10 @@ document.getElementById("y-1").innerHTML = 0;
 const yearsSecondDigit = years % 10;
 document.getElementById("y-2").innerHTML = yearsSecondDigit;
 
-const months = Math.floor(
+let months = Math.floor(
   (distance % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30)
 );
+if (years > 0) months += 12;
 const monthsFirstDigit = Math.floor(months / 10);
 document.getElementById("m-1").innerHTML =
   monthsFirstDigit > 0 ? monthsFirstDigit : 0;
@@ -30,4 +31,4 @@ document.getElementById("d-2").innerHTML = daysSecondDigit;
 
 // Display the result in the element with id="demo"
 document.getElementById("countdown").innerHTML =
-  years + " years " + months + " months " + days + " days ";
+ months + " months " + days + " days ";
