@@ -3,10 +3,6 @@ const now = new Date().getTime();
 
 const distance = eadDueDate - now;
 const years = Math.floor(distance / (1000 * 60 * 60 * 24 * 365));
-document.getElementById("y-1").innerHTML = 0;
-const yearsSecondDigit = years % 10;
-document.getElementById("y-2").innerHTML = yearsSecondDigit;
-
 let months = Math.floor(
   (distance % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30)
 );
