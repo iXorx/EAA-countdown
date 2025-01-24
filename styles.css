@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 750px;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+  padding: 16px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+h1 {
+  font-family: "Bona Nova SC", serif;
+  text-align: center;
+  font-size: 2.5rem;
+}
+h2,
+h3,
+h4 {
+  font-family: "Bona Nova SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.6rem;
+}
+p,
+li {
+  line-height: 1.5rem;
+}
+.divider {
+  height: 1px;
+  width: 90%;
+  margin: 3rem auto;
+  background-color: #212529;
+  opacity: 0.2;
+}
+.clock {
+  margin: 2rem 0;
+  text-align: center;
+}
+.clock > div {
+  display: inline-block;
+  text-align: center;
+  margin: 0 0.5rem;
+}
+.t {
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: row;
+}
+.d {
+  display: inline-block;
+  font-size: 3rem;
+  padding: 0.5rem;
+  background-color: #f6f6f6;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  font-weight: 700;
+  line-height: 1;
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.d:before {
+  content: "";
+  display: block;
+  left: 0;
+  right: 0;
+  top: 50%;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  border-top: 1px solid #fff;
+}
+.l {
+  font-family: "Bona Nova SC", serif;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+footer {
+  text-align: center;
+  color: #888;
+  font-size: 0.75rem;
+}
+a:focus {
+  outline: 2px dashed #bb86fd;
+}
+@media screen and (min-width: 550px) {
+  .d {
+    padding: 0.5rem 1rem;
+    font-size: 5rem;
+  }
+  .clock {
+    margin: 4rem auto;
+  }
+  .l {
+    font-size: 1.5rem;
+    line-height: 3rem;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #292929;
+    color: #f2e7ff;
+  }
+  .divider {
+    background-color: #f2e7ff;
+  }
+  a {
+    color: #bb86fd;
+    text-decoration: underline;
+  }
+  footer {
+    color: #ccc;
+  }
+  .d {
+    background-color: #23036a;
+    color: #995eff;
+  }
+  .d::before {
+    background: rgba(35, 3, 106, 0.5);
+    border-top: 1px solid #777;
+  }
+}

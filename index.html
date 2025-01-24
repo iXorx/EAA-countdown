@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>European Accessibility Act Countdown</title>
@@ -21,117 +21,13 @@
       src="https://data.happergy.es/script.js"
       data-domains="ixorx.github.io,www.eaa-countdown.eu,eaa-countdown.eu"
     ></script>
-    <style>
-      html,
-      body {
-        height: 100%;
-        width: 100%;
-        margin: 0 auto;
-        padding: 0;
-        max-width: 650px;
-        box-sizing: border-box;
-      }
-      body {
-        font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-        font-size: 1rem;
-        color: #212529;
-        text-align: left;
-        background-color: #fff;
-        padding: 16px;
-        display: grid;
-        grid-template-rows: auto 1fr;
-      }
-      h1 {
-        text-align: center;
-      }
-      .clock {
-        margin: 2rem 0;
-        text-align: center;
-      }
-      .clock > div {
-        display: inline-block;
-        text-align: center;
-        margin: 0 0.5rem;
-      }
-      .t {
-        gap: 0.5rem;
-        display: flex;
-        flex-direction: row;
-      }
-      .d {
-        display: inline-block;
-        font-size: 3rem;
-        padding: 0.5rem;
-        background-color: #f6f6f6;
-        position: relative;
-        border-radius: 10px;
-        overflow: hidden;
-        font-weight: 700;
-        line-height: 1;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-          rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-      }
-      .d:before {
-        content: "";
-        display: block;
-        left: 0;
-        right: 0;
-        top: 50%;
-        bottom: 0;
-        background: rgba(255, 255, 255, 0.6);
-        position: absolute;
-        border-top: 1px solid #fff;
-      }
-      .l {
-        margin-bottom: 0.5rem;
-        font-size: 1rem;
-        line-height: 2rem;
-        text-transform: uppercase;
-        font-weight: 800;
-      }
-      footer {
-        text-align: center;
-        color: #888;
-        font-size: 0.75rem;
-      }
-      a:focus {
-        outline: 2px dashed #bb86fd;
-      }
-      @media screen and (min-width: 550px) {
-        .d {
-          padding: 0.5rem 1rem;
-          font-size: 5rem;
-        }
-        .clock {
-          margin: 4rem auto;
-        }
-        .l {
-          font-size: 1.5rem;
-          line-height: 3rem;
-        }
-      }
-      @media (prefers-color-scheme: dark) {
-        body {
-          background: #292929;
-          color: #f2e7ff;
-        }
-        a {
-          color: #bb86fd;
-          text-decoration: underline;
-        }
-        footer {
-          color: #ccc;
-        }
-        .d {
-          background-color: #23036a;
-          color: #995eff;
-        }
-        .d::before {
-          background: rgba(35, 3, 106, 0.5);
-          border-top: 1px solid #777;
-        }
-      }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <noscript>
@@ -216,18 +112,15 @@
         >
       </p>
     </footer>
+    <script src="time.js"></script>
     <script>
-      const eadDueDate = new Date("Jun 28, 2025 00:00:00").getTime();
-      const now = new Date().getTime();
-      const distance = eadDueDate - now;
-      const days = Math.round(distance / (1000 * 3600 * 24));
-      const d0 = Math.floor(days / 100);
-      document.getElementById("d-0").innerHTML = d0 > 0 ? d0 : 0;
-      const d1 = Math.floor(days / 10) % 10;
-      document.getElementById("d-1").innerHTML = d1 > 0 ? d1 : 0;
-      const d2 = Math.floor(days) % 10;
-      document.getElementById("d-2").innerHTML = d2;
-      document.getElementById("countdown").innerHTML = days + " days ";
+      document.addEventListener("DOMContentLoaded", function () {
+        const { days, d0, d1, d2 } = calculateCountdown("2025-06-28T00:00:00");
+        document.getElementById("d-0").innerHTML = d0;
+        document.getElementById("d-1").innerHTML = d1;
+        document.getElementById("d-2").innerHTML = d2;
+        document.getElementById("countdown").innerHTML = days + " days";
+      });
     </script>
   </body>
 </html>

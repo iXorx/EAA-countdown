@@ -1,11 +1,16 @@
-const eadDueDate = new Date("Jun 28, 2025 00:00:00").getTime();
-const now = new Date().getTime();
-const distance = eadDueDate - now;
-const days = Math.floor(distance / (1000 * 3600 * 24));
-const d0 = Math.floor(days / 100);
-document.getElementById("d-0").innerHTML = d0 > 0 ? d0 : 0;
-const d1 = Math.floor(days / 10);
-document.getElementById("d-1").innerHTML = d1 > 0 ? d1 : 0;
-const d2 = days % 10;
-document.getElementById("d-2").innerHTML = d2;
-document.getElementById("countdown").innerHTML = months + " months " + days + " days ";
+function calculateCountdown(dueDateString) {
+  const eadDueDate = new Date(dueDateString).getTime();
+  const now = new Date().getTime();
+  let distance = eadDueDate - now;
+
+  if (distance < 0) {
+    distance = 0;
+  }
+
+  const days = Math.floor(distance / (1000 * 3600 * 24));
+  const d0 = Math.floor(days / 100);
+  const d1 = Math.floor((days % 100) / 10);
+  const d2 = days % 10;
+
+  return { days, d0, d1, d2 };
+}
