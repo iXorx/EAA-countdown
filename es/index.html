@@ -12,6 +12,7 @@
       name="keywords"
       content="European Disability Act, European Accessibility Act, European Union, law, disability, countdown, accessibility, a11y, A11yByXorx"
     />
+    <meta charset="UTF-8" />
     <meta name="author" content="Jordi Turull" />
     <meta name="robots" content="index, follow" />
     <script
@@ -21,6 +22,7 @@
       src="https://data.happergy.es/script.js"
       data-domains="ixorx.github.io,www.eaa-countdown.eu,eaa-countdown.eu"
     ></script>
+    <script src="../components/menu.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -52,453 +54,481 @@
           <div class="l">Días</div>
         </div>
       </div>
-      <article>
-        <header>
-          <h2>
-            El Acta Europea de Accesibilidad (EAA): Un cambio trascendental para
-            2025
+      <div class="layout">
+        <menu-component
+          button-text="Menu"
+          items='[
+              {"href":"#p1", "text":"Un cambio trascendental para 2025"},
+              {"href":"#p2", "text":"Contexto histórico y objetivos del EAA"},
+              {"href":"#p3", "text":"Alcance del EAA"},
+              {"href":"#p4", "text":"Requisitos de accesibilidad para empresas"},
+              {"href":"#p5", "text":"Beneficios para las empresas"},
+              {"href":"#p6", "text":"Desafíos y consideraciones para las empresas"},
+              {"href":"#p7", "text":"Pasos a seguir"},
+              {"href":"#p8", "text":"¿Es suficiente con usar plugins?"},
+              {"href":"#p9", "text":"Consecuencias del incumplimiento"}
+            ]'
+        ></menu-component>
+        <article>
+          <header>
+            <h2 id="p1">
+              El Acta Europea de Accesibilidad (EAA): Un cambio trascendental
+              para 2025
+            </h2>
+          </header>
+          <p>
+            <strong>
+              Faltan <span id="countdown"></span> días para que el European
+              Disability Act entre en vigor.
+            </strong>
+          </p>
+          <p>
+            El Acta Europea de Accesibilidad (de ahora en adelante referido como
+            EAA), formalmente conocida como la Directiva (UE) 2019/882, es una
+            legislación de la Unión Europea que entrará en vigor el 28 de junio
+            de 2025. Esta ley marca un hito en la historia de la accesibilidad
+            en Europa, con el objetivo de mejorar significativamente el acceso a
+            productos y servicios para personas con discapacidad en todo el
+            mercado único de la UE. El EAA representa un cambio paradigmático en
+            la forma en que las empresas deben considerar la accesibilidad,
+            pasando de ser una consideración que habitualmente queda relegada a
+            un segundo plano a un requisito fundamental en el diseño y
+            desarrollo de productos y servicios.
+          </p>
+
+          <div class="divider" aria-hidden="true"></div>
+
+          <h2 id="p2">Contexto histórico y objetivos del EAA</h2>
+          <p>
+            El EAA surge como respuesta a una larga historia de barreras y
+            desigualdades enfrentadas por las personas con discapacidad en
+            Europa. Durante décadas, la falta de estándares uniformes de
+            accesibilidad ha significado que millones de personas en Europa
+            (aproximadamente 100 millones) se han visto potencialmente excluidos
+            de participar plenamente en la sociedad y la economía. La necesidad
+            de armonizar las normas de accesibilidad en toda la UE se hizo cada
+            vez más evidente a medida que el mercado único europeo se
+            desarrollaba. Hasta ahora, cada país miembro tenía sus propias
+            regulaciones, lo que dificultaba tanto el comercio transfronterizo
+            como el acceso uniforme a productos y servicios para las personas
+            con discapacidad.
+          </p>
+          <h3>Los principales objetivos del EAA son:</h3>
+          <ul>
+            <li>
+              Eliminar barreras en el mercado único para productos y servicios
+              accesibles, facilitando la libre circulación de estos
+            </li>
+            <li>
+              Facilitar el cumplimiento de las obligaciones de accesibilidad
+              para las empresas, proporcionando un marco común y reduciendo la
+              fragmentación del mercado
+            </li>
+            <li>
+              Mejorar la calidad de vida de las personas con discapacidad y las
+              personas mayores, garantizando su plena participación en la
+              sociedad y la economía
+            </li>
+            <li>
+              Fomentar la innovación en el campo de la accesibilidad, impulsando
+              el desarrollo de nuevas tecnologías y soluciones
+            </li>
+            <li>
+              Promover la inclusión social y la igualdad de oportunidades para
+              todos los ciudadanos de la UE
+            </li>
+          </ul>
+
+          <div class="divider" aria-hidden="true"></div>
+
+          <h2 id="p3">
+            Alcance del EAA: ¿Qué productos y servicios están afectados?
           </h2>
-        </header>
-        <p>
-          <strong>
-            Faltan <span id="countdown"></span> días para que el European
-            Disability Act entre en vigor.
-          </strong>
-        </p>
-        <p>
-          El Acta Europea de Accesibilidad (de ahora en adelante referido como
-          EAA), formalmente conocida como la Directiva (UE) 2019/882, es una
-          legislación de la Unión Europea que entrará en vigor el 28 de junio de
-          2025. Esta ley marca un hito en la historia de la accesibilidad en
-          Europa, con el objetivo de mejorar significativamente el acceso a
-          productos y servicios para personas con discapacidad en todo el
-          mercado único de la UE. El EAA representa un cambio paradigmático en
-          la forma en que las empresas deben considerar la accesibilidad,
-          pasando de ser una consideración que habitualmente queda relegada a un
-          segundo plano a un requisito fundamental en el diseño y desarrollo de
-          productos y servicios.
-        </p>
+          <p>
+            El EAA tiene un alcance amplio y ambicioso, afectando a numerosos
+            sectores y tipos de productos y servicios. Es crucial que las
+            empresas comprendan en detalle qué áreas de su negocio pueden verse
+            afectadas. Las empresas deben prestar especial atención a los
+            siguientes productos y servicios:
+          </p>
+          <ul>
+            <li>
+              Ordenadores y sistemas operativos: Incluyendo hardware, software y
+              interfaces de usuario
+            </li>
+            <li>
+              Terminales de pago y cajeros automáticos: Asegurando que sean
+              utilizables por personas con diversas discapacidades
+            </li>
+            <li>
+              Teléfonos inteligentes y equipos de comunicaciones: Incluyendo
+              tanto el hardware como las aplicaciones y servicios asociados
+            </li>
+            <li>
+              Televisores y equipos relacionados con servicios de televisión
+              digital: Abarcando tanto los dispositivos como las interfaces de
+              usuario y las guías de programación electrónicas
+            </li>
+            <li>
+              Servicios de comunicaciones electrónicas: Incluyendo llamadas de
+              emergencia y garantizando la accesibilidad de las comunicaciones
+              de texto en tiempo real
+            </li>
+            <li>
+              Servicios de acceso a medios audiovisuales: Como plataformas de
+              streaming y servicios de video bajo demanda
+            </li>
+            <li>
+              Servicios relacionados con el transporte de pasajeros por aire,
+              autobús, ferrocarril y vías navegables: Incluyendo sistemas de
+              información, reserva y emisión de billetes
+            </li>
+            <li>
+              Servicios bancarios para consumidores: Abarcando sitios web,
+              aplicaciones móviles y servicios bancarios electrónicos
+            </li>
+            <li>
+              Libros electrónicos y software especializado: Asegurando la
+              accesibilidad de los formatos y las plataformas de lectura
+            </li>
+            <li>
+              Comercio electrónico: Incluyendo sitios web y aplicaciones móviles
+              de venta al por menor
+            </li>
+          </ul>
 
-        <div class="divider" aria-hidden="true"></div>
+          <div class="divider" aria-hidden="true"></div>
 
-        <h2>Contexto histórico y objetivos del EAA</h2>
-        <p>
-          El EAA surge como respuesta a una larga historia de barreras y
-          desigualdades enfrentadas por las personas con discapacidad en Europa.
-          Durante décadas, la falta de estándares uniformes de accesibilidad ha
-          significado que millones de personas en Europa (aproximadamente 100
-          millones) se han visto potencialmente excluidos de participar
-          plenamente en la sociedad y la economía. La necesidad de armonizar las
-          normas de accesibilidad en toda la UE se hizo cada vez más evidente a
-          medida que el mercado único europeo se desarrollaba. Hasta ahora, cada
-          país miembro tenía sus propias regulaciones, lo que dificultaba tanto
-          el comercio transfronterizo como el acceso uniforme a productos y
-          servicios para las personas con discapacidad.
-        </p>
-        <h3>Los principales objetivos del EAA son:</h3>
-        <ul>
-          <li>
-            Eliminar barreras en el mercado único para productos y servicios
-            accesibles, facilitando la libre circulación de estos
-          </li>
-          <li>
-            Facilitar el cumplimiento de las obligaciones de accesibilidad para
-            las empresas, proporcionando un marco común y reduciendo la
-            fragmentación del mercado
-          </li>
-          <li>
-            Mejorar la calidad de vida de las personas con discapacidad y las
-            personas mayores, garantizando su plena participación en la sociedad
-            y la economía
-          </li>
-          <li>
-            Fomentar la innovación en el campo de la accesibilidad, impulsando
-            el desarrollo de nuevas tecnologías y soluciones
-          </li>
-          <li>
-            Promover la inclusión social y la igualdad de oportunidades para
-            todos los ciudadanos de la UE
-          </li>
-        </ul>
+          <h2 id="p4">
+            Requisitos de accesibilidad: ¿Qué deben hacer las empresas?
+          </h2>
+          <p>
+            El EAA establece requisitos de accesibilidad específicos para cada
+            categoría de productos y servicios. Estos requisitos se basan en los
+            principios de diseño accesible establecidos por la
+            <a href="https://www.w3.org/WAI/">
+              WAI (Web Accessibility Initiative)
+            </a>
+            y buscan garantizar que los productos y servicios sean accesibles
+            para la mayor cantidad de personas posible, independientemente de
+            sus capacidades. En general, las empresas deberán asegurarse de que
+            sus ofertas sean:
+          </p>
 
-        <div class="divider" aria-hidden="true"></div>
+          <ul>
+            <li>
+              Perceptibles: La información y los elementos de la interfaz de
+              usuario deben presentarse a los usuarios de manera que puedan
+              percibirlos. Esto puede incluir proporcionar alternativas de texto
+              para contenido no textual, subtítulos para contenido de audio, y
+              asegurar un contraste de color suficiente.
+            </li>
+            <li>
+              Operables: Los componentes de la interfaz de usuario y la
+              navegación deben ser operables. Esto significa entre otras cosas
+              que todas las funcionalidades deben estar disponibles desde el
+              teclado, los usuarios deben tener tiempo suficiente para leer y
+              usar el contenido, y se debe evitar el contenido que pueda causar
+              convulsiones.
+            </li>
+            <li>
+              Comprensibles: La información y el funcionamiento de la interfaz
+              de usuario deben ser comprensibles. Esto incluye hacer que el
+              texto sea legible y comprensible, hacer que las páginas web
+              aparezcan y operen de manera predecible, y ayudar a los usuarios a
+              evitar y corregir errores.
+            </li>
+            <li>
+              Robustas: El contenido debe ser lo suficientemente robusto como
+              para ser interpretado de manera fiable por una amplia variedad de
+              agentes de usuario, incluidas las tecnologías de asistencia. Esto
+              implica maximizar la compatibilidad con las herramientas actuales
+              y futuras, es decir, cumplir con los estándares y buenas prácticas
+              de los lenguajes y tecnologías utilizadas.
+            </li>
+          </ul>
 
-        <h2>Alcance del EAA: ¿Qué productos y servicios están afectados?</h2>
-        <p>
-          El EAA tiene un alcance amplio y ambicioso, afectando a numerosos
-          sectores y tipos de productos y servicios. Es crucial que las empresas
-          comprendan en detalle qué áreas de su negocio pueden verse afectadas.
-          Las empresas deben prestar especial atención a los siguientes
-          productos y servicios:
-        </p>
-        <ul>
-          <li>
-            Ordenadores y sistemas operativos: Incluyendo hardware, software y
-            interfaces de usuario
-          </li>
-          <li>
-            Terminales de pago y cajeros automáticos: Asegurando que sean
-            utilizables por personas con diversas discapacidades
-          </li>
-          <li>
-            Teléfonos inteligentes y equipos de comunicaciones: Incluyendo tanto
-            el hardware como las aplicaciones y servicios asociados
-          </li>
-          <li>
-            Televisores y equipos relacionados con servicios de televisión
-            digital: Abarcando tanto los dispositivos como las interfaces de
-            usuario y las guías de programación electrónicas
-          </li>
-          <li>
-            Servicios de comunicaciones electrónicas: Incluyendo llamadas de
-            emergencia y garantizando la accesibilidad de las comunicaciones de
-            texto en tiempo real
-          </li>
-          <li>
-            Servicios de acceso a medios audiovisuales: Como plataformas de
-            streaming y servicios de video bajo demanda
-          </li>
-          <li>
-            Servicios relacionados con el transporte de pasajeros por aire,
-            autobús, ferrocarril y vías navegables: Incluyendo sistemas de
-            información, reserva y emisión de billetes
-          </li>
-          <li>
-            Servicios bancarios para consumidores: Abarcando sitios web,
-            aplicaciones móviles y servicios bancarios electrónicos
-          </li>
-          <li>
-            Libros electrónicos y software especializado: Asegurando la
-            accesibilidad de los formatos y las plataformas de lectura
-          </li>
-          <li>
-            Comercio electrónico: Incluyendo sitios web y aplicaciones móviles
-            de venta al por menor
-          </li>
-        </ul>
+          <div class="divider" aria-hidden="true"></div>
 
-        <div class="divider" aria-hidden="true"></div>
+          <h2 id="p5">Beneficios para las empresas</h2>
+          <p>
+            Aunque el cumplimiento del EAA puede parecer un desafío, ofrece
+            numerosas oportunidades y beneficios para las empresas que lo
+            aborden de manera proactiva:
+          </p>
+          <ul>
+            <li>
+              Mercado único armonizado: Las reglas comunes en toda la UE
+              facilitarán el comercio transfronterizo y reducirán los costos de
+              adaptación a diferentes normativas nacionales. Esto permitirá a
+              las empresas expandirse más fácilmente a nuevos mercados dentro de
+              la UE.
+            </li>
+            <li>
+              Expansión del mercado: Al hacer los productos más accesibles, las
+              empresas pueden llegar a un mercado potencial de 100 millones de
+              personas con discapacidad en la Unión Europea. Además, muchas
+              características de accesibilidad benefician a un público más
+              amplio, incluyendo personas mayores y usuarios en diferentes
+              contextos.
+            </li>
+            <li>
+              Impulso a la innovación: La necesidad de accesibilidad puede
+              estimular la creación de nuevos productos y servicios innovadores.
+              Las empresas que lideren en este campo pueden desarrollar
+              soluciones pioneras que les den una ventaja competitiva.
+            </li>
+            <li>
+              Mejora de la reputación: Las empresas que prioricen la
+              accesibilidad pueden mejorar significativamente su imagen
+              corporativa y atraer a consumidores socialmente conscientes. En
+              una era donde la responsabilidad social corporativa es cada vez
+              más importante, esto puede traducirse en una mayor lealtad del
+              cliente y un aumento en las ventas.
+            </li>
+            <li>
+              Ventaja competitiva: Adelantarse en el cumplimiento del EAA puede
+              proporcionar una ventaja sobre los competidores. Las empresas que
+              se adapten rápidamente estarán mejor posicionadas para capturar
+              cuota de mercado y establecerse como líderes en accesibilidad.
+            </li>
+            <li>
+              Mejora en la usabilidad general: Muchas características de
+              accesibilidad mejoran la usabilidad para todos los usuarios, no
+              solo para aquellos con discapacidades. Esto puede llevar a una
+              mayor satisfacción del cliente y a una reducción en los costos de
+              soporte.
+            </li>
+            <li>
+              Atracción y retención de talento: Las empresas que demuestren un
+              compromiso con la accesibilidad pueden atraer y retener a
+              empleados talentosos, incluyendo personas con discapacidad y
+              aquellos que valoran la diversidad y la inclusión.
+            </li>
+            <li>
+              Preparación para el futuro: A medida que la población europea
+              envejece, la demanda de productos y servicios accesibles
+              aumentará. Las empresas que se adapten ahora estarán mejor
+              preparadas para este cambio demográfico.
+            </li>
+          </ul>
 
-        <h2>Requisitos de accesibilidad: ¿Qué deben hacer las empresas?</h2>
-        <p>
-          El EAA establece requisitos de accesibilidad específicos para cada
-          categoría de productos y servicios. Estos requisitos se basan en los
-          principios de diseño accesible establecidos por la
-          <a href="https://www.w3.org/WAI/">
-            WAI (Web Accessibility Initiative)
-          </a>
-          y buscan garantizar que los productos y servicios sean accesibles para
-          la mayor cantidad de personas posible, independientemente de sus
-          capacidades. En general, las empresas deberán asegurarse de que sus
-          ofertas sean:
-        </p>
+          <div class="divider" aria-hidden="true"></div>
 
-        <ul>
-          <li>
-            Perceptibles: La información y los elementos de la interfaz de
-            usuario deben presentarse a los usuarios de manera que puedan
-            percibirlos. Esto puede incluir proporcionar alternativas de texto
-            para contenido no textual, subtítulos para contenido de audio, y
-            asegurar un contraste de color suficiente.
-          </li>
-          <li>
-            Operables: Los componentes de la interfaz de usuario y la navegación
-            deben ser operables. Esto significa entre otras cosas que todas las
-            funcionalidades deben estar disponibles desde el teclado, los
-            usuarios deben tener tiempo suficiente para leer y usar el
-            contenido, y se debe evitar el contenido que pueda causar
-            convulsiones.
-          </li>
-          <li>
-            Comprensibles: La información y el funcionamiento de la interfaz de
-            usuario deben ser comprensibles. Esto incluye hacer que el texto sea
-            legible y comprensible, hacer que las páginas web aparezcan y operen
-            de manera predecible, y ayudar a los usuarios a evitar y corregir
-            errores.
-          </li>
-          <li>
-            Robustas: El contenido debe ser lo suficientemente robusto como para
-            ser interpretado de manera fiable por una amplia variedad de agentes
-            de usuario, incluidas las tecnologías de asistencia. Esto implica
-            maximizar la compatibilidad con las herramientas actuales y futuras,
-            es decir, cumplir con los estándares y buenas prácticas de los
-            lenguajes y tecnologías utilizadas.
-          </li>
-        </ul>
+          <h2 id="p6">Desafíos y consideraciones para las empresas</h2>
+          <p>
+            La implementación del EAA también presenta algunos desafíos
+            significativos que las empresas deben tener en cuenta y abordar de
+            manera estratégica:
+          </p>
+          <ul>
+            <li>
+              Costos de adaptación: Puede ser necesario invertir
+              considerablemente en el rediseño de productos y la formación de
+              personal. Esto puede ser particularmente desafiante para las
+              empresas con recursos limitados.La buena noticia es que si se
+              mantienen buenas prácticas el coste la accesibilidad es muy bajo.
+            </li>
+            <li>
+              Complejidad técnica: Algunos requisitos de accesibilidad pueden
+              ser técnicamente complejos de implementar, especialmente en
+              productos y servicios ya existentes. Esto puede requerir una
+              revisión completa de los procesos de diseño y desarrollo.
+            </li>
+            <li>
+              Plazos ajustados: Con la fecha límite de 2025, las empresas deben
+              actuar rápidamente para asegurar el cumplimiento. Esto puede
+              requerir una priorización significativa de los esfuerzos de
+              accesibilidad dentro de la organización.
+            </li>
+            <li>
+              Necesidad de experiencia: Puede ser necesario contratar o formar a
+              expertos en accesibilidad. La escasez de profesionales
+              cualificados en este campo puede representar un desafío adicional.
+            </li>
+            <li>
+              Cambio cultural: Implementar la accesibilidad de manera efectiva a
+              menudo requiere un cambio cultural dentro de la organización, lo
+              que puede enfrentar resistencia y requerir tiempo y esfuerzo para
+              lograrse.
+            </li>
+            <li>
+              Mantenimiento continuo: La accesibilidad no es una tarea de una
+              sola vez, sino un proceso continuo que requiere atención y
+              recursos constantes para mantenerse al día con las nuevas
+              tecnologías y las necesidades cambiantes de los usuarios.
+            </li>
+          </ul>
 
-        <div class="divider" aria-hidden="true"></div>
+          <div class="divider" aria-hidden="true"></div>
 
-        <h2>Beneficios para las empresas</h2>
-        <p>
-          Aunque el cumplimiento del EAA puede parecer un desafío, ofrece
-          numerosas oportunidades y beneficios para las empresas que lo aborden
-          de manera proactiva:
-        </p>
-        <ul>
-          <li>
-            Mercado único armonizado: Las reglas comunes en toda la UE
-            facilitarán el comercio transfronterizo y reducirán los costos de
-            adaptación a diferentes normativas nacionales. Esto permitirá a las
-            empresas expandirse más fácilmente a nuevos mercados dentro de la
-            UE.
-          </li>
-          <li>
-            Expansión del mercado: Al hacer los productos más accesibles, las
-            empresas pueden llegar a un mercado potencial de 100 millones de
-            personas con discapacidad en la Unión Europea. Además, muchas
-            características de accesibilidad benefician a un público más amplio,
-            incluyendo personas mayores y usuarios en diferentes contextos.
-          </li>
-          <li>
-            Impulso a la innovación: La necesidad de accesibilidad puede
-            estimular la creación de nuevos productos y servicios innovadores.
-            Las empresas que lideren en este campo pueden desarrollar soluciones
-            pioneras que les den una ventaja competitiva.
-          </li>
-          <li>
-            Mejora de la reputación: Las empresas que prioricen la accesibilidad
-            pueden mejorar significativamente su imagen corporativa y atraer a
-            consumidores socialmente conscientes. En una era donde la
-            responsabilidad social corporativa es cada vez más importante, esto
-            puede traducirse en una mayor lealtad del cliente y un aumento en
-            las ventas.
-          </li>
-          <li>
-            Ventaja competitiva: Adelantarse en el cumplimiento del EAA puede
-            proporcionar una ventaja sobre los competidores. Las empresas que se
-            adapten rápidamente estarán mejor posicionadas para capturar cuota
-            de mercado y establecerse como líderes en accesibilidad.
-          </li>
-          <li>
-            Mejora en la usabilidad general: Muchas características de
-            accesibilidad mejoran la usabilidad para todos los usuarios, no solo
-            para aquellos con discapacidades. Esto puede llevar a una mayor
-            satisfacción del cliente y a una reducción en los costos de soporte.
-          </li>
-          <li>
-            Atracción y retención de talento: Las empresas que demuestren un
-            compromiso con la accesibilidad pueden atraer y retener a empleados
-            talentosos, incluyendo personas con discapacidad y aquellos que
-            valoran la diversidad y la inclusión.
-          </li>
-          <li>
-            Preparación para el futuro: A medida que la población europea
-            envejece, la demanda de productos y servicios accesibles aumentará.
-            Las empresas que se adapten ahora estarán mejor preparadas para este
-            cambio demográfico.
-          </li>
-        </ul>
+          <h2 id="p7">Pasos a seguir para la preparación</h2>
+          <p>
+            Para prepararse adecuadamente para el EAA, las empresas deberían
+            seguir un enfoque sistemático y exhaustivo:
+          </p>
+          <ol>
+            <li>
+              Realizar una auditoría exhaustiva de sus productos y servicios
+              actuales: Esto implica evaluar cada producto y servicio en
+              relación con los requisitos del EAA. Se deben identificar los
+              problemas de accesibilidad existentes y documentarlas
+              detalladamente.
+            </li>
+            <li>
+              Identificar áreas específicas que necesitan mejoras en
+              accesibilidad: Basándose en la auditoría, crear una lista de
+              prioridades para las áreas que requieren atención. Esto puede
+              incluir aspectos como la interfaz de usuario, la compatibilidad
+              con tecnologías de asistencia, o la provisión de información
+              accesible.
+            </li>
+            <li>
+              Desarrollar un plan detallado y calendarizado para implementar los
+              cambios necesarios: Este plan debe incluir hitos claros,
+              asignación de responsabilidades, y plazos realistas. Debe abarcar
+              no solo los cambios técnicos, sino también la formación del
+              personal y los cambios en los procesos.
+            </li>
+            <li>
+              Asignar recursos y presupuesto para las adaptaciones requeridas:
+              Esto puede implicar la contratación de personal adicional o la
+              asignación de tiempo de desarrollo para implementar las mejoras de
+              accesibilidad.
+            </li>
+            <li>
+              Formar al personal sobre los requisitos de accesibilidad y su
+              importancia: Esto debe incluir no solo al personal técnico, sino
+              también a los equipos de diseño, marketing, atención al cliente y
+              gestión. La formación debe cubrir tanto los aspectos técnicos como
+              la comprensión de las necesidades de los usuarios con
+              discapacidad.
+            </li>
+            <li>
+              Considerar la contratación de expertos en accesibilidad o la
+              colaboración con organizaciones especializadas: Estos expertos
+              pueden proporcionar orientación valiosa, realizar auditorías
+              independientes, y ayudar a implementar soluciones efectivas.
+            </li>
+            <li>
+              Implementar procesos de diseño inclusivo para futuros productos y
+              servicios: Esto implica incorporar consideraciones de
+              accesibilidad desde las primeras etapas del proceso de diseño, en
+              lugar de tratarlas como una consideración posterior.
+            </li>
+            <li>
+              Establecer mecanismos de retroalimentación con usuarios con
+              discapacidad: Idealmente se debería involucrar a usuarios con
+              diversas discapacidades en el proceso de diseño y prueba puede
+              proporcionar información invaluable y ayudar a garantizar que las
+              soluciones sean verdaderamente efectivas.
+            </li>
+            <li>
+              Revisar y actualizar las políticas y procedimientos internos:
+              Asegurarse de que la accesibilidad esté integrada en todos los
+              aspectos de las operaciones de la empresa, desde la contratación
+              hasta la gestión de proyectos y el control de calidad.
+            </li>
+            <li>
+              Desarrollar un plan de comunicación: Informar a los clientes,
+              socios y otras partes interesadas sobre los esfuerzos de
+              accesibilidad de la empresa y cómo beneficiarán a todos los
+              usuarios.
+            </li>
+            <li>
+              Establecer métricas y procesos de seguimiento: Implementar
+              sistemas para medir y monitorear el progreso en la implementación
+              de la accesibilidad, y para evaluar su impacto en la satisfacción
+              del cliente y el rendimiento del negocio.
+            </li>
+            <li>
+              Planificar para la mejora continua: Reconocer que la accesibilidad
+              es un proceso en evolución y establecer mecanismos para mantenerse
+              al día con las mejores prácticas y las tecnologías emergentes.
+            </li>
+          </ol>
 
-        <div class="divider" aria-hidden="true"></div>
+          <div class="divider" aria-hidden="true"></div>
 
-        <h2>Desafíos y consideraciones para las empresas</h2>
-        <p>
-          La implementación del EAA también presenta algunos desafíos
-          significativos que las empresas deben tener en cuenta y abordar de
-          manera estratégica:
-        </p>
-        <ul>
-          <li>
-            Costos de adaptación: Puede ser necesario invertir considerablemente
-            en el rediseño de productos y la formación de personal. Esto puede
-            ser particularmente desafiante para las empresas con recursos
-            limitados.La buena noticia es que si se mantienen buenas prácticas
-            el coste la accesibilidad es muy bajo.
-          </li>
-          <li>
-            Complejidad técnica: Algunos requisitos de accesibilidad pueden ser
-            técnicamente complejos de implementar, especialmente en productos y
-            servicios ya existentes. Esto puede requerir una revisión completa
-            de los procesos de diseño y desarrollo.
-          </li>
-          <li>
-            Plazos ajustados: Con la fecha límite de 2025, las empresas deben
-            actuar rápidamente para asegurar el cumplimiento. Esto puede
-            requerir una priorización significativa de los esfuerzos de
-            accesibilidad dentro de la organización.
-          </li>
-          <li>
-            Necesidad de experiencia: Puede ser necesario contratar o formar a
-            expertos en accesibilidad. La escasez de profesionales cualificados
-            en este campo puede representar un desafío adicional.
-          </li>
-          <li>
-            Cambio cultural: Implementar la accesibilidad de manera efectiva a
-            menudo requiere un cambio cultural dentro de la organización, lo que
-            puede enfrentar resistencia y requerir tiempo y esfuerzo para
-            lograrse.
-          </li>
-          <li>
-            Mantenimiento continuo: La accesibilidad no es una tarea de una sola
-            vez, sino un proceso continuo que requiere atención y recursos
-            constantes para mantenerse al día con las nuevas tecnologías y las
-            necesidades cambiantes de los usuarios.
-          </li>
-        </ul>
-
-        <div class="divider" aria-hidden="true"></div>
-
-        <h2>Pasos a seguir para la preparación</h2>
-        <p>
-          Para prepararse adecuadamente para el EAA, las empresas deberían
-          seguir un enfoque sistemático y exhaustivo:
-        </p>
-        <ol>
-          <li>
-            Realizar una auditoría exhaustiva de sus productos y servicios
-            actuales: Esto implica evaluar cada producto y servicio en relación
-            con los requisitos del EAA. Se deben identificar los problemas de
-            accesibilidad existentes y documentarlas detalladamente.
-          </li>
-          <li>
-            Identificar áreas específicas que necesitan mejoras en
-            accesibilidad: Basándose en la auditoría, crear una lista de
-            prioridades para las áreas que requieren atención. Esto puede
-            incluir aspectos como la interfaz de usuario, la compatibilidad con
-            tecnologías de asistencia, o la provisión de información accesible.
-          </li>
-          <li>
-            Desarrollar un plan detallado y calendarizado para implementar los
-            cambios necesarios: Este plan debe incluir hitos claros, asignación
-            de responsabilidades, y plazos realistas. Debe abarcar no solo los
-            cambios técnicos, sino también la formación del personal y los
-            cambios en los procesos.
-          </li>
-          <li>
-            Asignar recursos y presupuesto para las adaptaciones requeridas:
-            Esto puede implicar la contratación de personal adicional o la
-            asignación de tiempo de desarrollo para implementar las mejoras de
-            accesibilidad.
-          </li>
-          <li>
-            Formar al personal sobre los requisitos de accesibilidad y su
-            importancia: Esto debe incluir no solo al personal técnico, sino
-            también a los equipos de diseño, marketing, atención al cliente y
-            gestión. La formación debe cubrir tanto los aspectos técnicos como
-            la comprensión de las necesidades de los usuarios con discapacidad.
-          </li>
-          <li>
-            Considerar la contratación de expertos en accesibilidad o la
-            colaboración con organizaciones especializadas: Estos expertos
-            pueden proporcionar orientación valiosa, realizar auditorías
-            independientes, y ayudar a implementar soluciones efectivas.
-          </li>
-          <li>
-            Implementar procesos de diseño inclusivo para futuros productos y
-            servicios: Esto implica incorporar consideraciones de accesibilidad
-            desde las primeras etapas del proceso de diseño, en lugar de
-            tratarlas como una consideración posterior.
-          </li>
-          <li>
-            Establecer mecanismos de retroalimentación con usuarios con
-            discapacidad: Idealmente se debería involucrar a usuarios con
-            diversas discapacidades en el proceso de diseño y prueba puede
-            proporcionar información invaluable y ayudar a garantizar que las
-            soluciones sean verdaderamente efectivas.
-          </li>
-          <li>
-            Revisar y actualizar las políticas y procedimientos internos:
-            Asegurarse de que la accesibilidad esté integrada en todos los
-            aspectos de las operaciones de la empresa, desde la contratación
-            hasta la gestión de proyectos y el control de calidad.
-          </li>
-          <li>
-            Desarrollar un plan de comunicación: Informar a los clientes, socios
-            y otras partes interesadas sobre los esfuerzos de accesibilidad de
-            la empresa y cómo beneficiarán a todos los usuarios.
-          </li>
-          <li>
-            Establecer métricas y procesos de seguimiento: Implementar sistemas
-            para medir y monitorear el progreso en la implementación de la
-            accesibilidad, y para evaluar su impacto en la satisfacción del
-            cliente y el rendimiento del negocio.
-          </li>
-          <li>
-            Planificar para la mejora continua: Reconocer que la accesibilidad
-            es un proceso en evolución y establecer mecanismos para mantenerse
-            al día con las mejores prácticas y las tecnologías emergentes.
-          </li>
-        </ol>
-
-        <div class="divider" aria-hidden="true"></div>
-
-        <h2>
-          ¿Es suficiente con usar los llamados overlays o plugins de
-          accesibilidad?
-        </h2>
-        <p>
-          La respuesta corta es no. Los overlays de accesibilidad no garantizan
-          el cumplimiento de las leyes.
-        </p>
-        <p>
-          Overlay o plugin de accesibilidad es un término paraguas que engloba a
-          todas aquellas soluciones de software que afirman solucionar la
-          accesibilidad de un sitio web, habitualmente con una línea de código.
-          Se reconocen por un botón con un icono de accesibilidad que suele
-          ubicarse en las partes inferiores de una web y abre una ventana modal
-          con opciones al clicarse.
-        </p>
-        <p>
-          Algunos ejemplos de overlays son AccessiBe, EqualWeb, Accessiway,
-          AudioEye, y un largo etcétera.
-        </p>
-        <a
-          href="https://www.edf-feph.org/accessibility-overlays-dont-guarantee-compliance-with-european-legislation/"
-          >El European Disability Forum deja claro que no son suficiente para
-          hacer que un sitio web sea accesible.</a
-        >
-        <p>
-          En
-          <a href="https://overlayfactsheet.com/en/"
-            >https://overlayfactsheet.com/en/</a
+          <h2 id="p1">
+            ¿Es suficiente con usar los llamados overlays o plugins de
+            accesibilidad?
+          </h2>
+          <p>
+            La respuesta corta es no. Los overlays de accesibilidad no
+            garantizan el cumplimiento de las leyes.
+          </p>
+          <p>
+            Overlay o plugin de accesibilidad es un término paraguas que engloba
+            a todas aquellas soluciones de software que afirman solucionar la
+            accesibilidad de un sitio web, habitualmente con una línea de
+            código. Se reconocen por un botón con un icono de accesibilidad que
+            suele ubicarse en las partes inferiores de una web y abre una
+            ventana modal con opciones al clicarse.
+          </p>
+          <p>
+            Algunos ejemplos de overlays son AccessiBe, EqualWeb, Accessiway,
+            AudioEye, y un largo etcétera.
+          </p>
+          <a
+            href="https://www.edf-feph.org/accessibility-overlays-dont-guarantee-compliance-with-european-legislation/"
+            >El European Disability Forum deja claro que no son suficiente para
+            hacer que un sitio web sea accesible.</a
           >
-          se discute la eficacia de estas tecnologías para cumplir con los
-          estándares de accesibilidad y se abordan preocupaciones relacionadas
-          con la privacidad de los datos personales de los usuarios. El sitio
-          cuenta con el respaldo de cientos de profesionales en accesibilidad
-          web, quienes han firmado una declaración expresando sus preocupaciones
-          sobre la eficacia y las limitaciones de las overlays de accesibilidad.
-          Estas firmas reflejan el consenso de expertos en la materia,
-          incluyendo consultores, desarrolladores y defensores de los derechos
-          de las personas con discapacidad, quienes promueven un enfoque basado
-          en estándares como WCAG (Web Content Accessibility Guidelines) en
-          lugar de soluciones automatizadas.
-        </p>
-        <p>
-          Cumplir con los estándares de accesibilidad es un proceso que
-          involucra a todo el equipo de un producto digital. Desde la fase de
-          diseño, pasando por la implementación en código y por quienes generan
-          el contenido. Las overlays de accesibilidad simplemente no pueden
-          modidficar el diseño y el código fuente para hacerlos accesibles.
-        </p>
+          <p>
+            En
+            <a href="https://overlayfactsheet.com/en/"
+              >https://overlayfactsheet.com/en/</a
+            >
+            se discute la eficacia de estas tecnologías para cumplir con los
+            estándares de accesibilidad y se abordan preocupaciones relacionadas
+            con la privacidad de los datos personales de los usuarios. El sitio
+            cuenta con el respaldo de cientos de profesionales en accesibilidad
+            web, quienes han firmado una declaración expresando sus
+            preocupaciones sobre la eficacia y las limitaciones de las overlays
+            de accesibilidad. Estas firmas reflejan el consenso de expertos en
+            la materia, incluyendo consultores, desarrolladores y defensores de
+            los derechos de las personas con discapacidad, quienes promueven un
+            enfoque basado en estándares como WCAG (Web Content Accessibility
+            Guidelines) en lugar de soluciones automatizadas.
+          </p>
+          <p>
+            Cumplir con los estándares de accesibilidad es un proceso que
+            involucra a todo el equipo de un producto digital. Desde la fase de
+            diseño, pasando por la implementación en código y por quienes
+            generan el contenido. Las overlays de accesibilidad simplemente no
+            pueden modidficar el diseño y el código fuente para hacerlos
+            accesibles.
+          </p>
 
-        <div class="divider" aria-hidden="true"></div>
+          <div class="divider" aria-hidden="true"></div>
 
-        <h2>Consecuencias del incumplimiento</h2>
-        <p>
-          El incumplimiento del EAA podría traer consecuencias severas,
-          incluyendo:
-        </p>
-        <ul>
-          <li>
-            <strong>Multas y sanciones económicas:</strong> Cada Estado miembro
-            aplicará sanciones específicas y proporcionales al nivel de
-            incumplimiento. Las empresas que no cumplan con los requisitos
-            podrían enfrentar multas significativas que pueden impactar sus
-            finanzas y reputación.
-          </li>
-          <li>
-            <strong>Pérdida de clientes:</strong> Las empresas pueden sufrir una
-            pérdida de clientes que demanden accesibilidad y una imagen negativa
-            en un mercado que valora cada vez más la inclusión.
-          </li>
-        </ul>
-        <p>
-          Prepararse para el EAA significa no solo cumplir con la ley, sino
-          aprovechar una oportunidad de crecimiento y diferenciación en el
-          mercado único europeo.
-        </p>
-      </article>
+          <h2>Consecuencias del incumplimiento</h2>
+          <p>
+            El incumplimiento del EAA podría traer consecuencias severas,
+            incluyendo:
+          </p>
+          <ul>
+            <li>
+              <strong>Multas y sanciones económicas:</strong> Cada Estado
+              miembro aplicará sanciones específicas y proporcionales al nivel
+              de incumplimiento. Las empresas que no cumplan con los requisitos
+              podrían enfrentar multas significativas que pueden impactar sus
+              finanzas y reputación.
+            </li>
+            <li>
+              <strong>Pérdida de clientes:</strong> Las empresas pueden sufrir
+              una pérdida de clientes que demanden accesibilidad y una imagen
+              negativa en un mercado que valora cada vez más la inclusión.
+            </li>
+          </ul>
+          <p>
+            Prepararse para el EAA significa no solo cumplir con la ley, sino
+            aprovechar una oportunidad de crecimiento y diferenciación en el
+            mercado único europeo.
+          </p>
+        </article>
+      </div>
     </main>
     <footer>
       <p>

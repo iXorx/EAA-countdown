@@ -28,7 +28,7 @@ body {
 h1 {
   font-family: "Bona Nova SC", serif;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 h2,
 h3,
@@ -38,10 +38,10 @@ h4 {
   font-style: normal;
 }
 h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 h3 {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
 p,
 li {
@@ -109,7 +109,26 @@ footer {
 a:focus {
   outline: 2px dashed #bb86fd;
 }
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 768px) {
+  html,
+  body {
+    max-width: 1200px;
+    padding: 3rem;
+  }
+  .layout {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 2rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.6rem;
+  }
   .d {
     padding: 0.5rem 1rem;
     font-size: 5rem;
@@ -139,7 +158,7 @@ a:focus {
   }
   .d {
     background-color: #23036a;
-    color: #995eff;
+    color: #ab7aff;
   }
   .d::before {
     background: rgba(35, 3, 106, 0.5);
